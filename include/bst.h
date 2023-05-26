@@ -53,5 +53,5 @@ class BST {
        else
             return  0;
     }
-};
+}
 #endif  // INCLUDE_BST_H_
