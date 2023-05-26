@@ -28,9 +28,9 @@ class BST {
         return rt;
     }
     Node* searchNode(Node* rt, const T& value) {
-           if (rt == nullptr || rt->value == value) 
+           if (rt == nullptr || rt->value == value)
                    return rt;
-           if (value < rt->value) 
+           if (value < rt->value)
                    return searchNode(rt->left, value);
            return searchNode(rt->right, value);
     }
@@ -50,8 +50,8 @@ class BST {
        Node* t = searchNode(rt, value);
        if (t != nullptr)
             return t->c;
-       else 
-	       return  0;
+       else
+            return  0;
     }
 };
 #endif  // INCLUDE_BST_H_
