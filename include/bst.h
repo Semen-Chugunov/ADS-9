@@ -13,12 +13,12 @@ class BST {
     Node* rt;
     Node* addNode(Node* rt, const T& value) {
         if (rt == nullptr) {
-		rt = new Node;
-		rt->value = value;
-		rt->left =  nullptr;
-		rt->right = nullptr;
-		rt->c = 1;
-	} else if (rt->value < value) {
+            rt = new Node;
+            rt->value = value;
+            rt->left =  nullptr;
+            rt->right = nullptr;
+            rt->c = 1;
+        } else if (rt->value < value) {
             rt->right = addNode(rt->right, value);
         } else if (rt->value > value) {
             rt->left = addNode(rt->left, value);
@@ -28,11 +28,11 @@ class BST {
         return rt;
     }
     Node* searchNode(Node* rt, const T& value) {
-	    if (rt == nullptr || rt->value == value) 
-		    return rt;
-	    if (value < rt->value) 
-		    return searchNode(rt->left, value);
-	    return searchNode(rt->right, value);
+           if (rt == nullptr || rt->value == value) 
+                   return rt;
+           if (value < rt->value) 
+                   return searchNode(rt->left, value);
+           return searchNode(rt->right, value);
     }
     int getDepth(Node* rt) {
         if (rt == nullptr) return 0;
@@ -49,9 +49,9 @@ class BST {
     int search(const T& value) {
        Node* t = searchNode(rt, value);
        if (t != nullptr)
-	       return t->c;
-       else return  0;
+            return t->c;
+       else 
+	       return  0;
     }
 };
-	
 #endif  // INCLUDE_BST_H_
