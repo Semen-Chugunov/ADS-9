@@ -43,6 +43,7 @@ class BST {
     BST() : rt(nullptr) {}
     int depth() {
         return getDepth(rt) - 1;
+    }
     void add(const T& value) {
         rt = addNode(rt, value);
     }
@@ -53,5 +54,5 @@ class BST {
        else
             return  0;
     }
-}
+};
 #endif  // INCLUDE_BST_H_
